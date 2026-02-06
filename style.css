@@ -1,0 +1,31 @@
+h1{
+  color: #2742F5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*La tercera forma para hacer reglas CSS son por medio de clases*/
+
+.contenedor{
+  display: flex;
+  flex-direction: column;
+}
+
+.caja{
+  display: flex;
+  flex-direction: row;
+}
+
+.contenedor input{
+  flex: 1;
+  width: 100%;
+}
+
+.contenedor label{
+  flex-basis: 180px;
+}
+
+button{
+  background-color: blue;
+  color: white;
+}

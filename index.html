@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de cadenas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Ejemplo para el manejo de cadenas</h1>
+    <h2>Captura de un nuevo cliente</h2>
+
+    <div class="contenedor">
+      <div class="caja">
+        <label>Ingresa el nombre</label>
+        <input type="text" id="cajaNombre"></input>
+      </div>
+      <div class="caja">
+        <label>Ingresa el apellido paterno</label>
+        <input type="text" id="cajaApellidoPaterno"></input>
+      </div>
+      <div class="caja">
+        <label>Ingresa el apellido materno</label>
+        <input type="text" id="cajaApellidoMaterno"></input>
+      </div>
+      <button onclick="concatenarCadenas()">Generar nombre completo</button>
+      <script src="cadena.js"></script>
+      <div class="caja">
+        <label>El nombre completo es</label>
+        <input type="text" id="cajaNombreCompleto" disabled></input>
+      </div>
+    </div>
+
+  </body>
+</html>
