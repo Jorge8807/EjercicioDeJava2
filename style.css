@@ -106,9 +106,13 @@ h2{
 
 .columna-fecha{
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  gap: 2px;
   flex: 1 1 260px;
+}
+
+.columna-fecha input{
+  height: 30px;
 }
 
 button{
