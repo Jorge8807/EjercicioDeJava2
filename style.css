@@ -1,31 +1,139 @@
-h1{
-  color: #2742F5;
-  font-family: Arial, Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap");
+
+:root{
+  --bg-1: #f2f6fb;
+  --bg-2: #fef4e8;
+  --ink: #0d1b2a;
+  --muted: #44546a;
+  --accent: #0f7a6d;
+  --accent-2: #f08a28;
+  --card: #ffffff;
+  --shadow: 0 20px 50px rgba(10, 24, 42, 0.12);
+  --ring: 0 0 0 3px rgba(15, 122, 109, 0.2);
 }
 
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(15, 122, 109, 0.12), transparent 60%),
+    radial-gradient(700px 450px at 90% 10%, rgba(240, 138, 40, 0.15), transparent 55%),
+    linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  display: grid;
+  place-items: start center;
+  padding: 48px 20px 64px;
+}
+
+h1{
+  margin: 0 0 6px 0;
+  font-family: "Source Serif 4", "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--ink);
+  letter-spacing: 0.2px;
+}
+
+h2{
+  margin: 0 0 28px 0;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
 
 /*La tercera forma para hacer reglas CSS son por medio de clases*/
 
 .contenedor{
+  width: min(760px, 100%);
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 28px 26px 30px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(13, 27, 42, 0.06);
 }
 
 .caja{
   display: flex;
-  flex-direction: row;
-}
-
-.contenedor input{
-  flex: 1;
-  width: 100%;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .contenedor label{
-  flex-basis: 180px;
+  flex-basis: 220px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.contenedor input{
+  flex: 1 1 260px;
+  width: 100%;
+  border: 1px solid rgba(13, 27, 42, 0.15);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #fbfcff;
+}
+
+.contenedor input:focus{
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--ring);
+}
+
+.contenedor input:disabled{
+  background: #f1f4f8;
+  color: #6a7688;
 }
 
 button{
-  background-color: blue;
+  align-self: flex-start;
+  background: linear-gradient(120deg, var(--accent), #14a08f);
   color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(15, 122, 109, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(15, 122, 109, 0.3);
+  background: linear-gradient(120deg, #0c6b60, var(--accent-2));
+}
+
+button:active{
+  transform: translateY(0);
+}
+
+@media (max-width: 720px){
+  body{
+    padding: 36px 16px 56px;
+  }
+
+  .contenedor{
+    padding: 22px 18px 24px;
+  }
+
+  .contenedor label{
+    flex-basis: 100%;
+  }
+
+  button{
+    width: 100%;
+    justify-content: center;
+  }
 }
