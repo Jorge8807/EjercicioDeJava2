@@ -62,14 +62,15 @@ h2{
 .caja{
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 .contenedor label{
-  flex-basis: 220px;
+  flex-basis: 240px;
   font-weight: 600;
   color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .contenedor input,
@@ -78,7 +79,7 @@ h2{
   width: 100%;
   border: 1px solid rgba(13, 27, 42, 0.15);
   border-radius: 12px;
-  padding: 12px 14px;
+  padding: 8px 14px;
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   background: #fbfcff;
@@ -99,8 +100,15 @@ h2{
 
 .contenedor textarea{
   resize: vertical;
-  min-height: 110px;
+  min-height: 160px;
   line-height: 1.5;
+}
+
+.columna-fecha{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 260px;
 }
 
 button{

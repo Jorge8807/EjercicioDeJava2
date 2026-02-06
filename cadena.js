@@ -17,3 +17,10 @@ function textoAMayusculas(texto){
 function textoAMinusculas(texto){
   return texto.toLowerCase();
 }
+
+function formatearFechaDDMMAA(dia, mes, anio){
+  const diaFormateado = String(dia).padStart(2, "0");
+  const mesFormateado = String(mes).padStart(2, "0");
+  const anioFormateado = String(anio).slice(-2);
+  return `${diaFormateado}/${mesFormateado}/${anioFormateado}`;
+}
