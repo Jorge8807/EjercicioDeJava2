@@ -27,6 +27,21 @@
         <label>El nombre completo es</label>
         <input type="text" id="cajaNombreCompleto" disabled></input>
       </div>
+      <div class="caja">
+        <label>Ingresa un texto largo</label>
+        <textarea id="cajaTextoLargo" rows="4"></textarea>
+      </div>
+      <button onclick="document.getElementById('cajaLongitudTexto').value=longitudTexto(document.getElementById('cajaTextoLargo').value)">Calcular longitud</button>
+      <div class="caja">
+        <label>La longitud del texto es</label>
+        <input type="text" id="cajaLongitudTexto" disabled></input>
+      </div>
+      <button onclick="document.getElementById('cajaTextoConvertido').value=textoAMayusculas(document.getElementById('cajaTextoLargo').value)">Convertir a mayusculas</button>
+      <button onclick="document.getElementById('cajaTextoConvertido').value=textoAMinusculas(document.getElementById('cajaTextoLargo').value)">Convertir a minusculas</button>
+      <div class="caja">
+        <label>Texto convertido</label>
+        <textarea id="cajaTextoConvertido" rows="4" disabled></textarea>
+      </div>
     </div>
 
   </body>

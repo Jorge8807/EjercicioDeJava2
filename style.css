@@ -72,7 +72,8 @@ h2{
   color: var(--muted);
 }
 
-.contenedor input{
+.contenedor input,
+.contenedor textarea{
   flex: 1 1 260px;
   width: 100%;
   border: 1px solid rgba(13, 27, 42, 0.15);
@@ -83,15 +84,23 @@ h2{
   background: #fbfcff;
 }
 
-.contenedor input:focus{
+.contenedor input:focus,
+.contenedor textarea:focus{
   outline: none;
   border-color: var(--accent);
   box-shadow: var(--ring);
 }
 
-.contenedor input:disabled{
+.contenedor input:disabled,
+.contenedor textarea:disabled{
   background: #f1f4f8;
   color: #6a7688;
+}
+
+.contenedor textarea{
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
 }
 
 button{
